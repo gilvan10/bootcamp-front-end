@@ -1,0 +1,6 @@
+<div class="container">
+    <!--Usar uma diretiva do angular ngFor vai exibir a qtd de stocks. Para exibir os valores dos stocks vai utilizar o induitebind, criando um stock em stock.component.ts e utilizando aqui no código-->
+    <app-stock-card *ngFor ="let stock of stocks" [stock] = "stock"></app-stock-card>
+    
+</div>
+

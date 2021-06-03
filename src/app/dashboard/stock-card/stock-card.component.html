@@ -1,0 +1,26 @@
+<!--<div class="stock-card-container">
+    <div class="stock-info-container">
+        <h2>SANB11</h2>
+        <p>08/07/2019 17:58:29</p>
+    </div>
+    <div class="stock-value-container">
+        <span class="value">R$ 38,98</span>
+        <span class="variation">+ 0,37%</span>
+    </div>
+    
+</div> -->
+
+<!--Usar a diretiva do class, para apresentar a variação negativa com a cor vermalha ou positiva com a cor verde (Escrever um nome para classe, criar ela no css do stock-card e quando vai ser executada.) [class.negative-variation] = "stock.variation < 0"-->
+<div class="stock-card-container" [class.negative-variation-border] = "stock.variation < 0">
+    <div class="stock-info-container">
+        <!--Bind no angular é pegar um atributo no arquivo typescript e exibir no html-->
+        <h2>{{stock.name}}</h2>
+        <p>{{stock.date}}</p>
+    </div>
+    <div class="stock-value-container">
+        <!--Utilizar pipe para tranformar o atributo price (currency(biblioteca angular/common) trabalha com valores monetários) BRL moeda brasileira. O pipe são funções para trabalhar com valores. No atributo stock.variation o método toLocaleString(), converte o . em , para ficar adequado e já tranforma em string-->
+        <span class="value">{{stock.price | currency:'BRL'}}</span>
+        <span class="variation" [class.negative-variation] = "stock.variation < 0">{{variation}}</span>
+    </div>
+    
+</div>

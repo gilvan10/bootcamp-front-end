@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+    padding-left: 1.5rem;
+    /*Os cards ficaram lado a lado*/
+    display: flex;
+    flex-direction: row;
+    /*Os cards ficara responsivos de acordo a tela*/
+    flex-wrap: wrap;
+    /*cards no centro da tela*/
+    justify-content: center;
+}
