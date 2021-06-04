@@ -9,7 +9,7 @@
     /*outra forma é no lugar de px colocar rem: 16rem     é necessário baixar a extensão px to rem. O rem é mais responsivo*/
     background-color: var(--primary-color);
 
-    /*Um elemento é centralizado dentro de outro*/
+    /*Um elemento é centralizado dentro de outro */
     display: flex;
     /*O elemento é centralizado na horizontal Obs(row ele muda a a configuração justify-content e align-items)*/
     flex-direction: row;
